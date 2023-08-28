@@ -1,9 +1,13 @@
 from prefect import flow, task
 
+from prefect.blocks.system import String
+
+string_block = String.load("db-host")
+
 
 @task
 def create_message():
-    msg = "Hello from Task"
+    msg = f"connected from {string_block.value}"
     return(msg)
 
 
