@@ -1,9 +1,9 @@
 ###
 ### A complete description of a Prefect Deployment for flow 'hello-world'
 ###
-name: demo-deployment
+name: test-deployment
 description: null
-version: 29eaf2d2bc6838d39333b2207bda438b
+version: cd69b261b7b94b819a296c1bdd48b11f
 # The work queue that will handle this deployment's runs
 work_queue_name: default
 work_pool_name: null
@@ -28,8 +28,17 @@ infrastructure:
 ###
 flow_name: hello-world
 manifest_path: null
-storage: null
-path: /Users/brianandy/Documents/Coding/prefect_intro/prefect_intro
+storage:
+  repository: https://github.com/brianfandy/prefect_intro.git
+  reference: null
+  access_token: '**********'
+  include_git_objects: true
+  _block_document_id: 067a1741-4d15-4791-88f5-c287d6848e18
+  _block_document_name: prefect-repo
+  _is_anonymous: false
+  block_type_slug: github
+  _block_type_slug: github
+path: ''
 entrypoint: hello_world:hello_world
 parameter_openapi_schema:
   title: Parameters
@@ -37,5 +46,5 @@ parameter_openapi_schema:
   properties: {}
   required: null
   definitions: null
-timestamp: '2023-08-28T07:46:10.867346+00:00'
+timestamp: '2023-08-28T08:53:58.748082+00:00'
 triggers: []
